@@ -37,7 +37,6 @@ export default createStore({
     getWeather(context) {
         const API_KEY = import.meta.env.VITE_API_KEY;
         const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${context.state.weatherData.city}&appid=${API_KEY}`
-        console.log(API_KEY)
         fetch(API_URL)
             .then((res) => res.json())
             .then(data => {
